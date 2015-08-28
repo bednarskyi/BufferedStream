@@ -36,7 +36,7 @@ namespace GZipStreamTest
                     {
                         using(var buf = new BufferedStream(compressor))
                         {
-                            compressor.Write(bytes, 0, bytes.Length);
+                            buf.Write(bytes, 0, bytes.Length);
                             //using(BufferedStream buffer = new BufferedStream(compressor, bufferSize))
                             //{
                             //    buffer.Write(bytes, 0, bytes.Length);

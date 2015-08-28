@@ -24,6 +24,7 @@ public class Client
       //  string remoteName = args[0];
 
         // Create the underlying socket and connect to the server.
+        Console.WriteLine("OS {0} {1} processors count {2}\n", Environment.OSVersion, Environment.Is64BitOperatingSystem ? "x64" : "x32", Environment.ProcessorCount);
         Socket clientSocket = new Socket(AddressFamily.InterNetwork,
             SocketType.Stream, ProtocolType.Tcp);
 
@@ -64,7 +65,8 @@ public class Client
         Console.ReadKey();
     }
 
-    static void SendData(Stream netStream, Stream bufStream)
+    static void 
+        SendData(Stream netStream, Stream bufStream)
     {
         DateTime startTime;
         double networkTime, bufferedTime;
