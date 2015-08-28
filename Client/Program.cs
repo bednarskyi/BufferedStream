@@ -6,7 +6,7 @@ using System.Net.Sockets;
 
 public class Client
 {
-    const int dataArraySize = 100;
+    const int dataArraySize = 200;
     const int streamBufferSize = 1000;
     const int numberOfLoops = 10000;
 
