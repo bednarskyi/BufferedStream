@@ -81,7 +81,7 @@ public class Client
             netStream.Write(dataToSend, 0, dataToSend.Length);
         }
         networkTime = (DateTime.Now - startTime).TotalMilliseconds;
-        Console.WriteLine("{0} bytes sent in {1} seconds.\n",
+        Console.WriteLine("{0} bytes sent in {1} milliseconds.\n",
             numberOfLoops * dataToSend.Length,
             networkTime.ToString("F1"));
 
@@ -94,7 +94,7 @@ public class Client
         }
         bufStream.Flush();
         bufferedTime = (DateTime.Now - startTime).TotalMilliseconds;
-        Console.WriteLine("{0} bytes sent in {1} seconds.\n",
+        Console.WriteLine("{0} bytes sent in {1} milliseconds.\n",
             numberOfLoops * dataToSend.Length,
             bufferedTime.ToString("F1"));
 
@@ -122,7 +122,7 @@ public class Client
                 receivedData, 0, receivedData.Length);
         }
         networkTime = (DateTime.Now - startTime).TotalMilliseconds;
-        Console.WriteLine("{0} bytes received in {1} seconds.\n",
+        Console.WriteLine("{0} bytes received in {1} milliseconds.\n",
             bytesReceived.ToString(),
             networkTime.ToString("F1"));
 
@@ -145,7 +145,7 @@ public class Client
         }
 
         bufferedTime = (DateTime.Now - startTime).TotalMilliseconds;
-        Console.WriteLine("{0} bytes received in {1} seconds.\n",
+        Console.WriteLine("{0} bytes received in {1} milliseconds.\n",
             bytesReceived.ToString(),
             bufferedTime.ToString("F1"));
 
